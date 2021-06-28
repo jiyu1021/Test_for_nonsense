@@ -1,8 +1,9 @@
 language: cpp
 compiler: gcc
 install: 
-  - wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh -O anaconda.sh
-  - bash anaconda.sh -b -p $HOME/anaconda
+  - wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh 
+  - ls
+  - bash Anaconda-latest-Linux-x86_64.sh
   - conda env create -f scripts/mapd-deps-conda-dev-env.yml --force -n omnisci-dev
   - conda activate omnisci-dev
 script:
