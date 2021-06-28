@@ -1,15 +1,7 @@
 language: cpp
 compiler: gcc
 install: 
-  - wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh 
-  - ls
-  - bash Anaconda3-2021.05-Linux-x86_64.sh -b -p
-  - source "$HOME/anaconda3/etc/profile.d/conda.sh"
-  - hash -r
-  - conda config --set always_yes yes --set changeps1 no
-  - conda update -q conda
-  # Useful for debugging any issues with conda
-  - conda info -a
+
   - conda env create -f scripts/mapd-deps-conda-dev-env.yml --force -n omnisci-dev
   - conda activate omnisci-dev
 script:
